@@ -1,0 +1,184 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    flex: 1 0 auto;
+    background: rgba(10, 10, 35, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 127, 0.3);
+}
+
+.raffle {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.raffle h2 {
+    font-size: 2.5rem;
+    color: #00ff7f;
+    text-shadow: 0 0 10px #800080;
+    margin-bottom: 1.5rem;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.raffle p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.raffle-details {
+    background: rgba(128, 0, 128, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.raffle-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
+}
+
+.raffle-details h3 {
+    font-size: 1.8rem;
+    color: #00ff7f;
+    text-shadow: 0 0 5px #800080;
+    margin: 1rem 0;
+}
+
+.raffle-details ul,
+.raffle-details ol {
+    list-style-position: inside;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.raffle-details ul li,
+.raffle-details ol li {
+    margin-bottom: 0.5rem;
+}
+
+.raffle-details a {
+    color: #00ff7f;
+    text-decoration: none;
+}
+
+.raffle-details a:hover {
+    text-decoration: underline;
+}
+
+.raffle-details strong {
+    color: #00ff7f;
+}
+
+.raffle-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.raffle-image-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.raffle-image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.5);
+}
+
+.raffle-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #00ff7f;
+    transition: border-color 0.3s ease;
+}
+
+.raffle-image-item:hover .raffle-image {
+    border-color: #800080;
+}
+
+.luck-message {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .raffle h2 {
+        font-size: 2rem;
+    }
+
+    .raffle p {
+        font-size: 1rem;
+    }
+
+    .raffle-details {
+        padding: 1.5rem;
+    }
+
+    .raffle-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .raffle-details ul,
+    .raffle-details ol {
+        font-size: 1rem;
+    }
+
+    .raffle-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .raffle-image {
+        max-width: 250px;
+    }
+
+    .luck-message {
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ff7f, 0 0 20px #800080;
+    }
+    to {
+        text-shadow: 0 0 20px #00ff7f, 0 0 40px #800080;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
